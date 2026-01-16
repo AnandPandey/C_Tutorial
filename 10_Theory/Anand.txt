@@ -1,0 +1,2 @@
+Hello! This is Anand Pandey.
+I am here to explain you about file pointers.
