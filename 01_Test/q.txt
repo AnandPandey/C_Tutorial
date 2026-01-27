@@ -1,0 +1,77 @@
+write a C program to represent 8 bit binary representation of a number using bitwise operator
+Write a program to subtract a number from another using two's complement without using the minus operator
+write a C program to check whether a given 8 bit number is negative using bitwise operations 
+write a function invert(x,p,n) that returns x with n bits that 
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    unsigned char num;
+    int i;
+
+    printf("Enter a number (0–255): ");
+    scanf("%hhu", &num);
+
+    printf("8-bit Binary representation: ");
+    for (i = 7; i >= 0; i--) {
+        printf("%d", (num >> i) & 1);
+    }
+
+    return 0;
+}
+
+
+
+#include <stdio.h>
+
+int main() {
+    int a, b, result;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    result = a + (~b + 1);   
+
+    printf("Result: %d\n", result);
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    signed char num;
+
+    printf("Enter an 8-bit number (-128 to 127): ");
+    scanf("%hhd", &num);
+
+    if ((num >>7)&1)
+        printf("Number is NEGATIVE\n");
+    else
+        printf("Number is POSITIVE\n");
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+unsigned invert(unsigned x, int p, int n);
+
+int main() {
+    unsigned x;
+    int p, n;
+
+    printf("Enter x, p, n: ");
+    scanf("%u %d %d", &x, &p, &n);
+
+    printf("Result: %u\n", invert(x, p, n));
+    return 0;
+}
+
+unsigned invert(unsigned x, int p, int n) {
+    return x ^ (((1 << n) - 1) << (p - n + 1));
+}
