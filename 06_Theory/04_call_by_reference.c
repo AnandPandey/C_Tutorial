@@ -3,8 +3,8 @@
 int sum(int*,int*);
 
 int sum(int* a, int* b){ 
-    *a=*a+1;  // modifying the actual value of a
-    *b=*b+1;  // modifying the actual value of b  
+    *a=*a+1;  
+    *b=*b+1;   
     return *a+*b;
 }
 int main() {

@@ -6,7 +6,7 @@ int main() {
     printf("\nThe address of i using pointer j is %p", j);
 
 
-    printf("\nThe value of i at address j is %d\n", *j);
+    printf("\nThe value of i at address j is %p\n", *j);
     printf("The value of i  %d\n", *(&i));
     printf("The address of j is %p\n", &j);
     printf("The value of j is %p\n", *(&j));
